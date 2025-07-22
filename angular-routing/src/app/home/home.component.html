@@ -1,0 +1,22 @@
+<h3>Welcome to Home Component</h3>
+<h4>************************************ Without Lazy Load *********************************</h4>
+<div>
+    <button *ngFor="let tab of tabs" (click)="activeTab = tab">
+        {{tab}}
+    </button>
+</div>
+
+<div>
+    <ng-container *ngComponentOutlet="activeComponent"></ng-container>
+</div>
+<h4>******************************************************************************************</h4>
+<h4>************************************ With Lazy Load *********************************</h4>
+<div>
+    <button *ngFor="let tab of lazyLoadTab" (click)="loadTabLazily(tab)">
+        {{tab}}
+    </button>
+</div>
+<div>
+    <ng-container *ngComponentOutlet="activeLazyComponent"></ng-container>
+</div>
+<h4>******************************************************************************************</h4>
